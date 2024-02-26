@@ -3,6 +3,7 @@ import 'package:android/widgets/date_and_time.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/app_routes.dart';
+import '../widgets/app.dart';
 import '../widgets/search.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -38,6 +39,27 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       const DateAndTimeWidget(),
                       const Spacer(),
+                      Row(
+                        children: [
+                          AppWidget(
+                            bgColor: Colors.black,
+                            child: Image.asset(
+                              'assets/spotify.png',
+                              height: 45,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          AppWidget(
+                            bgColor: Colors.black,
+                            child: Image.asset(
+                              'assets/netflix.png',
+                              height: 40,
+                            ),
+                          ),
+                        ],
+                      ),
                       Container(
                         alignment: Alignment.center,
                         padding: const EdgeInsets.symmetric(vertical: 30.0),
